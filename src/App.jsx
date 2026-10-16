@@ -11,8 +11,8 @@ function App() {
   const [error, setError] = useState(null);
   const [extractedText, setExtractedText] = useState('');
 
-  // 배포 시 VITE_API_URL 환경변수 사용 (로컬에서는 빈 문자열 = 프록시)
-  const baseUrl = import.meta.env.VITE_API_URL || '';
+  // 배포된 백엔드 URL 기본 연결 (로컬 환경에서는 VITE_API_URL을 지정하거나 프록시 사용)
+  const baseUrl = import.meta.env.VITE_API_URL || 'https://ar-scanner-backend.onrender.com';
 
 
   // Search by text manually
