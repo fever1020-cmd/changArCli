@@ -11,7 +11,9 @@ function App() {
   const [error, setError] = useState(null);
   const [extractedText, setExtractedText] = useState('');
 
-  const baseUrl = '';
+  // 배포 시 VITE_API_URL 환경변수 사용 (로컬에서는 빈 문자열 = 프록시)
+  const baseUrl = import.meta.env.VITE_API_URL || '';
+
 
   // Search by text manually
   const handleTextSearch = async (title) => {
