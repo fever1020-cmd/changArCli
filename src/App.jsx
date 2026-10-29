@@ -85,6 +85,7 @@ function App() {
             onTextSearch={handleTextSearch} 
             onImageSearch={handleImageSearch}
             isLoading={loading} 
+            extractedTitle={extractedText}
           />
           
           {loading && (
